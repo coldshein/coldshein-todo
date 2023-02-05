@@ -1,27 +1,32 @@
 import React from 'react';
 import { useDispatch } from 'react-redux'
 import { removeTodo, toggleTodo } from '../redux/slices/todoSlice';
+
+
 const Todo = ({ title, time, id, completed }) => {
     const dispatch = useDispatch();
-
     return (
-        <div class="task-item">
-            <div class="check-item">
+        <div className="task-item">
+            <div className="check-item">
                 <input
                     type="checkbox"
                     id={title}
                     checked={completed}
-                    onChange={() => dispatch(toggleTodo(id))}
+                    onChange={() => dispatch(toggleTodo(id))}   
                 />
-                <label for={title}>{title}</label>
-                <span class="checkmark"></span>
+                <label htmlFor={title}>{title}</label>
+                <span className="checkmark"></span>
             </div>
-            <span class="date-time">{time}</span>
-            <button class="remove" onClick={() => dispatch(removeTodo(id))}>
+            <span className="date-time">{time}</span>
+            
+            <button className="remove" onClick={() => dispatch(removeTodo(id))}>
                 <img src="assets/img/remove.svg" alt="" />
             </button>
         </div>
     );
+        
 }
+
+
 
 export default Todo;

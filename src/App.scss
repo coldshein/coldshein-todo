@@ -21,7 +21,7 @@
 .block-wrapper {
   max-width: 1000px;
   width: 100%;
-
+  
   margin: 0 auto;
   padding: 30px 0;
   border-radius: 40px;
@@ -238,4 +238,43 @@ label {
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
+}
+
+// Not found
+.notfound-title{
+  text-align: center;
+}
+.notfound-subtitle{
+  text-align: center;
+}
+// completed
+.completed-wrapper{
+ height: 800px;
+}
+.completed-title{
+  text-align: center;
+}
+.completed-list{
+  padding: 30px;
+  width: 80%;
+  margin: 0 auto;
+  .task-item{
+    width: 100%;
+  }
+}
+
+@media (max-width:1050px) {
+  .App{
+    padding: 0 20px;
+  }
+}
+@media (max-width:850px) {
+  .block-wrapper{
+    max-height: 700px;
+    height: 100%;
+    
+  }
+  .task-list{
+   height: 450px;
+  }
 }

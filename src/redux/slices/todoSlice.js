@@ -7,14 +7,8 @@ export const todoSlice = createSlice({
         todos: [],
     },
     reducers:{
-        addTodo: (state, action) => {
-            let now = new Date().toLocaleTimeString().slice(0,-3); // 11:02  
-            state.todos.push({
-                id: new Date().toISOString(),
-                title: action.payload,
-                completed: false,
-                time: now,
-            })
+        setTodo: (state, action) => {
+            state.todos.push(action.payload)
         },
         removeTodo: (state, action) => {
            state.todos =  state.todos.filter((todo) => todo.id !== action.payload)
@@ -26,6 +20,6 @@ export const todoSlice = createSlice({
     }
 })
 
-export const { addTodo, removeTodo,toggleTodo } = todoSlice.actions
+export const { setTodo, removeTodo,toggleTodo } = todoSlice.actions
 
 export default todoSlice.reducer
