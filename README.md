@@ -1,6 +1,6 @@
-## TODO LIST
+# TODO LIST
 
-# technologies
+## technologies
 * react-router-dom
 * redux toolkit
 * typescript
