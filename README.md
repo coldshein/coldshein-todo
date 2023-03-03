@@ -1,7 +1,7 @@
 # TODO LIST
 
 ## technologies
-* react-router-dom
-* redux toolkit
+* react
+* redux toolkit state manager
 * typescript
-* react-hooks
+* axios
